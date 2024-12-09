@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #f4f4f4;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Animation 1: Bounce */
+        .box1 {
+            background: #3498db;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-50px); }
+        }
+
+        /* Animation 2: Rotate */
+        .box2 {
+            background: #e74c3c;
+            animation: rotate 2s infinite linear;
+        }
+        @keyframes rotate {
+            0% { transform: rotate(0); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Animation 3: Scale */
+        .box3 {
+            background: #2ecc71;
+            animation: scale 3s infinite;
+        }
+        @keyframes scale {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.5); }
+        }
+
+        /* Animation 4: Fade */
+        .box4 {
+            background: #f1c40f;
+            animation: fade 3s infinite;
+        }
+        @keyframes fade {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        /* Animation 5: Slide */
+        .box5 {
+            background: #9b59b6;
+            animation: slide 3s infinite;
+        }
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(200px); }
+            100% { transform: translateX(0); }
+        }
+
+        /* Animation 6: Skew */
+        .box6 {
+            background: #1abc9c;
+            animation: skew 2s infinite;
+        }
+        @keyframes skew {
+            0%, 100% { transform: skew(0); }
+            50% { transform: skew(20deg); }
+        }
+
+        /* Animation 7: Pulse */
+        .box7 {
+            background: #34495e;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        /* Animation 8: Flip */
+        .box8 {
+            background: #e67e22;
+            animation: flip 2s infinite;
+        }
+        @keyframes flip {
+            0%, 100% { transform: rotateY(0); }
+            50% { transform: rotateY(180deg); }
+        }
+
+        /* Animation 9: Wiggle */
+        .box9 {
+            background: #d35400;
+            animation: wiggle 1.5s infinite;
+        }
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0); }
+            25% { transform: rotate(10deg); }
+            75% { transform: rotate(-10deg); }
+        }
+
+        /* Animation 10: Color Change */
+        .box10 {
+            background: #bdc3c7;
+            animation: colorChange 3s infinite;
+        }
+        @keyframes colorChange {
+            0% { background-color: #bdc3c7; }
+            25% { background-color: #2ecc71; }
+            50% { background-color: #3498db; }
+            75% { background-color: #e74c3c; }
+            100% { background-color: #bdc3c7; }
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">Bounce</div>
+    <div class="box box2">Rotate</div>
+    <div class="box box3">Scale</div>
+    <div class="box box4">Fade</div>
+    <div class="box box5">Slide</div>
+    <div class="box box6">Skew</div>
+    <div class="box box7">Pulse</div>
+    <div class="box box8">Flip</div>
+    <div class="box box9">Wiggle</div>
+    <div class="box box10">Color</div>
+</body>
+</html>
